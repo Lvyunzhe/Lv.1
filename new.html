@@ -1,9 +1,103 @@
-<html>
+<!doctype html>
+<html lang="zh-CN">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>关于哲的小网页</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
 
-  <body style="margin: 0">
-   <h1>哈哈！只是一个纯粹的新页面而已啦！</h1>
+      .shadow {
+        box-shadow:
+          rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+          rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .white {
+        background-color: white;
+      }
+
+      .flex1 {
+        flex: 1;
+      }
+
+      .column {
+        flex-direction: column;
+      }
+
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!--侧边栏-->
+    <div style="width: 200px; z-index: 2" class="white shadow">
+      <!--头像栏-->
+      <div
+        class="flex"
+        style="
+          padding: 10px;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid black;
+        "
+      >
+        <img src="./LYZ.png" alt="愚者" width="50px" height="50px" />
+        <div style="margin-left: 10px">愚者</div>
+      </div>
+      <!--导航栏-->
+      <div></div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+      <!--头部栏-->
+      <div style="height: 60px; z-index: 1" class="white shadow"></div>
+      <!--内容区-->
+      <div style="overflow: auto" class="flex1 flex">
+        <!--左区-->
+        <div style="flex: 3" class="flex column mg8">
+          <!--数据区-->
+          <div class="flex">
+            <!--数据块-->
+            <div style="height: 100px" class="flex1 white mgr8 shadow"></div>
+            <div style="height: 100px" class="flex1 white mgr8 shadow"></div>
+            <div style="height: 100px" class="flex1 white mgr8 shadow"></div>
+            <div style="height: 100px" class="flex1 white shadow"></div>
+          </div>
+          <!--列表区-->
+          <div class="flex column">
+            <!--列表项-->
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+          </div>
+        </div>
+        <!--右区-->
+        <div style="flex: 1" class="flex column mgr8 mgt8">
+          <!--提示区-->
+          <div style="height: 150px" class="white shadow"></div>
+          <!--消息区-->
+          <div style="height: 300px" class="white mgt8 shadow"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
